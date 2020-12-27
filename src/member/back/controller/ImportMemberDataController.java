@@ -78,8 +78,7 @@ public class ImportMemberDataController {
 		if(errors.isEmpty()) {
 			redAttr.addFlashAttribute("result", "資料輸入成功");
 		}
-		
-		
+	
 		redAttr.addFlashAttribute("errors", errors);
 		return "redirect:/backStageEntry";
 		
@@ -107,7 +106,6 @@ public class ImportMemberDataController {
 				String status = csvRecord.get("status");
 				String neckName = csvRecord.get("neck_name");
 				String regDate = csvRecord.get("regDate");
-//				String imgURL = csvRecord.get("imgURL");
 				
 				password = MemberGlobal.getSHA1Endocing(MemberGlobal.encryptString(password));
 				System.out.println("======================加密:" + password);
@@ -127,10 +125,7 @@ public class ImportMemberDataController {
 				mb.setReg_Date(sqldate);
 				
 				mbInfo.setNeck_name(neckName);
-				
-//				byte[] bytesImg = getURLtoBytes(imgURL);
-//				mbInfo.setPer_img(bytesImg);
-				
+								
 				Set<MemberBasic> mbSet = new HashSet<MemberBasic>();
 				mbSet.add(mb);
 				mbInfo.setMemberBasic(mb);

@@ -50,32 +50,11 @@ public class MemberInfoController {
 	}
 	
 	
-//	@RequestMapping(path = "/member/memberInfoUpdateEntry", method = RequestMethod.GET)
-//	public String processInfoUpdateTurn() {
-//		return "member/memberInfoUpdate";
-//	}
-	
-	@RequestMapping(path = "/member/socailInfoEntry", method = RequestMethod.GET)
-	public String processSocailInfo() {
-		return "member/socailLoginInfo";	
-	}
-	
 	@RequestMapping(path = "/member/memberInfoOpenPageEntry")
 	public String processInfoOpenPage() {
 		return "member/info/formalInfoOpenPage";
 	}
 	
-	
-	@RequestMapping(path = "/member/memberInfoUpdateChange", method = RequestMethod.POST)
-	public String processInfoUpdateEntry(@ModelAttribute("Member")MemberBasic mb, Model m) {
-		
-		System.out.println("seqno:" + mb.getSeqno());
-		System.out.println("ncName:" + mb.getMemberInfo().getNeck_name());
-		
-		m.addAttribute("Member", mb);
-		return "member/memberInfoUpdate";
-		
-	}
 	
 	@ResponseBody
 	@GetMapping(value = "/member/memberOther")

@@ -252,15 +252,7 @@ public class MemberBackStageController {
 		return gdMap;
 	}
 	
-	
-	//註冊年分分布圖
-//	public Map<String, Object> processRegYear(){
-//		Map<String, Object> yearMap = new HashMap<String, Object>();
-//		
-//		
-//		
-//	}
-	
+		
 	
 	//單獨查詢
 	@ResponseBody
@@ -396,7 +388,7 @@ public class MemberBackStageController {
 	}
 	
 	
-	//批量新增假資料
+	//批量新增亂數會員資料
 	@ResponseBody
 	@GetMapping(path = "/randomMbDate")
 	public int processRandomMbDate() throws ParseException {

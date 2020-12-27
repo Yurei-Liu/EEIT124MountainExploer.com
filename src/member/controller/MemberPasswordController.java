@@ -46,10 +46,6 @@ public class MemberPasswordController {
 			return 0;
 		}else {
 			
-//			Map<String, String> errors = new HashMap<String, String>();
-//			m.addAttribute("errors", errors);
-			
-			
 			MemberBasic mb = mbService.select(account, email);
 			if(mb != null) {
 				
@@ -67,16 +63,12 @@ public class MemberPasswordController {
 				MailUtils.sendMail(email, emailmessage);
 				System.out.println(emailmessage);
 				
-//				m.addAttribute("result", "暫時密碼已發送到您的信箱，請盡快更新您的密碼。");
-				
 				return 1;
 			} else {
-//				errors.put("msg", "帳號、Email錯誤或不存在");
 				return 2;
 			}
 		}
 		
-//		return "member/formalLoginAlone";
 	}
 	
 	
@@ -105,12 +97,6 @@ public class MemberPasswordController {
 	
 	
 	//更改密碼
-//	@RequestMapping(path = "/member/memberPwdChangeEntry", method = RequestMethod.GET)
-//	public String processUpdatePwdEntry() {
-//		return "member/memberPwdChange";
-//	}
-	
-	
 	@ResponseBody
 	@GetMapping(path = "/member/memberPwdChangeAction")
 	public boolean processUpdatePwd(int seqno,

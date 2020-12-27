@@ -50,13 +50,6 @@
 		</nav>
 	</header>
 	<div class="div_ul">
-
-		<!-- <div class="div_li1">
-            <a>保留區</a>
-        </div>
-        <div class="div_li3">
-            <a>保留區</a>
-        </div> -->
         <div class="div_li2" style="background: #ecf5ff; height: auto;">
             <!-- 每頁不同的內容從這裡開始 -->
             <form
@@ -122,17 +115,8 @@
         </div>
     </div>
 
-	<footer id="footer">
-<!-- 		<a>全站導覽</a> -->
-<!-- 		<button id="demo1">確認demo1</button> -->
-<!-- 		<button id="demo2">錯誤demo2</button> -->
-<!-- 		<button id="demo3">確認提醒demo3</button> -->
-<!-- 		<button id="demo4">多重選項&提醒視窗demo4</button> -->
-<!-- 		<button id="demo5">Demo5</button> -->
-<!-- 		<button id="demo6">Demo6</button> -->
-
-
-
+	<footer id="footer"
+			include-html="/MountainExploer.com/forinclude/includeForFooter.html">
 	</footer>
 </body>
 <script src="../js/upLoadImg.js"></script>

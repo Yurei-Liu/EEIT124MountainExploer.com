@@ -1,15 +1,3 @@
-//驗證暱稱
-// $(".ncName").on("blur", function(){
-//     let NcVal = $.trim($(".ncName").val());
-    
-//     if(NcVal == ""){
-//         $(".ncsp").html("<font color='red'>請輸入暱稱</font>");
-//     }else{
-//         $(".ncsp").html("");
-//     }
-// })
-
-
 //驗證生日
 $(".birDate").on("blur", function(){
     let BrVal = $.trim($(".birDate").val());

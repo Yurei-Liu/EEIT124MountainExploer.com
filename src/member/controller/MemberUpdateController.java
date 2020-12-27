@@ -41,7 +41,6 @@ import oracle.net.aso.m;
 
 
 @Controller
-//@SessionAttributes(names = {"Member", "LoginOK"})
 public class MemberUpdateController {
 	
 	@Autowired
@@ -55,12 +54,6 @@ public class MemberUpdateController {
 	
 	@Autowired
 	private HttpServletRequest request;
-	
-	
-//	@RequestMapping(path = "/member/formalUpdateInfoEntry", method = RequestMethod.GET)
-//	public String processFormalUpdateInfoEntry() {
-//		return "member/info/formalUpdateInfo";
-//	}
 	
 	
 	@RequestMapping(path = "/member/memberFirstInfoEntry", method = RequestMethod.GET)
@@ -82,19 +75,9 @@ public class MemberUpdateController {
 		
 		System.out.println("會員編號:" + seqno);
 		
-//		MemberInfo mbInfo = new MemberInfo();
-//		MemberBasic mb = new MemberBasic();
-		
-		
-//		mbInfo.setGender(gender);
-		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		java.util.Date parse = sdf.parse(birDate);
 		Date sqldate = new Date(parse.getTime());
-//		mbInfo.setBirthday(sqldate);
-		
-//		mbInfo.setPhone(phone);
-//		mbInfo.setClimb_ex(exp);
 		
 		MemberBasic queryMb = mbService.select(seqno);
 		if(queryMb != null) {
@@ -109,15 +92,7 @@ public class MemberUpdateController {
 				mbService.updateData(queryMb);
 				
 				System.out.println("================身分組更新：" + queryMb.getMemberStatus().getSeqno());
-				
-//				mbInfo.setMemberBasic(queryMb);
-//				mbInfoService.update(mbInfo);
-//				queryMb.setMemberInfo(mbInfo);
-				
-//				MemberBasic newMb = new MemberBasic();
-//				newMb = queryMb;
-//				newMb.getMemberStatus().setName("General Member");
-				
+								
 				m.addAttribute("Member", queryMb);
 				m.addAttribute("result", "認證成功");
 				System.out.println("一般會員認證成功");
@@ -144,6 +119,7 @@ public class MemberUpdateController {
 	}
 	
 	
+	//會員資料修改
 	@ResponseBody
 	@GetMapping(path = "/member/memberInfoUpdateAction")
 	public boolean processInfoUpdate(int seqno,
@@ -196,10 +172,6 @@ public class MemberUpdateController {
 		
 	}
 
-//	@RequestMapping(path = "/member/memberImageUploadEntry", method = RequestMethod.GET)
-//	public String processImageUpdateEntry() {
-//		return "member/info/memberImageUpload";
-//	}
 	
 	
 	//上傳、更新圖片
@@ -232,10 +204,5 @@ public class MemberUpdateController {
 		
 	}
 
-
-	
-	
-	
-	
 
 }

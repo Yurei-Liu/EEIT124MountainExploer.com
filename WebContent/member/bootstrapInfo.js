@@ -397,44 +397,6 @@ $(".textUpdate").on("click", function(){
     $(".otInp").val("夢尋綺星長空盡");
 })
 
-//驗證姓名
-// function chkName(chkName){
-//     let chkNameLen = chkName.length;
-//     let flag = false;
-
-//     if(chkName == ""){
-//         Swal.fire({
-//             icon:"warning",
-//             title:"姓名不得為空"
-//         }).then(function(){
-
-//         })
-//     }else if(chkNameLen >= 2){
-//         for(let i = 0; i < chkNameLen; i++){
-//             let ch = chkName.charCodeAt(i);
-//             if(ch >= 0x4e00 && ch <= 0x9fff){
-//                 flag = true;
-//             }else{
-//                 flag = false;
-//                 break;
-//             }
-//         }
-
-//         if(flag){
-//             return true;
-//         }else{
-//             return false;
-//         }
-//     }else{
-//         Swal.fire({
-//             icon:"warning",
-//             title:"姓名至少兩個中文字元"
-//         }).then(function(){
-//             e.preventDefault()
-//         })
-//     }
-// }
-
 
 //驗證Email
 function chkEmail(chkEmail){

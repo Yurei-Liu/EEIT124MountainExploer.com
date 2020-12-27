@@ -1,0 +1,131 @@
+@charset "UTF-8";
+body{
+	background:	#E0E0E0;
+    background-image: linear-gradient(#FFFFFF 0.5px,transparent 0),
+    	linear-gradient(90deg, #FFFFFF 0.5px,transparent 0),
+    	linear-gradient(hsla(0,0%,100%,.3) 1px,transparent 0),
+    	linear-gradient(90deg,hsla(0,0%,100%,.3) 1px,transparent 0);
+    background-size:35px 35px,25px 25px,7.5px 7.5px,7.5px 7.5px;
+}
+.m-list-searchBar{
+	position : static;
+	margin : 15px;
+}
+.act-container{
+	margin : 5px;
+	-webkit-transition: margin 0.25s ease-out;
+    -moz-transition: margin 0.25s ease-out;
+    -o-transition: margin 0.25s ease-out;
+}
+.act-container:hover{
+	margin-top : 0px;
+}
+.m-sdc-adj{
+	border : none;
+	height : atuo;
+	min-height: 500px;
+}
+.m-ta-aj{
+	width : 100%;
+}
+thead th {
+	font-size: 10px;
+}
+
+tbody td {
+	font-size: 15px;
+}
+.m-tb-ti{
+	font-size: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: left;
+}
+.d-li-na{
+	width:30%;
+}
+
+.showImage {
+	width: 35px;
+	height: 35px;
+}
+
+.extendImage {
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	display: none;
+	z-index: 10;
+}
+
+.tagContainer {
+	font-size : 10px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.regTag {
+	font-size: 20px;
+	margin : 0px 2.5px;
+	color: blue;
+}
+
+.regTag a:link {
+	color: blue;
+}
+
+.regTag a:visited {
+	color: blue;
+}
+
+.actTag {
+	font-size: 20px;
+	margin : 0px 5px;
+	color: red;
+}
+
+.actTag a:link {
+	color: red;
+}
+
+.actTag a:visited {
+	color: red;
+}
+.hideTbody{
+	display : none;
+}
+.list-newPost {
+
+}
+
+.order-table-tb td:nth-child(2){
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.loading-overlay {
+  display: table;
+  opacity: 0.85;
+  z-index : 10 !important;
+}
+
+.loading-overlay-content {
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.loading-overlay.loading-theme-light {
+  background-color: #fff;
+  color: #000;
+}
+
+.loading-overlay.loading-theme-dark {
+  background-color: #000;
+  color: #fff;
+}
